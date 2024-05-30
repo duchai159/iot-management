@@ -1,0 +1,64 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 50px 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card.on {
+    background-color: #d4edda;
+}
+
+.icon{
+    color: #a8a8a8fa;
+}
+
+.device-1 .icon.on {
+    animation: spin 1s linear infinite;
+}
+
+.device-4 .icon.on, .device-5 .icon.on {
+    color: rgba(213, 64, 64, 0.708);
+    animation: shake 0.5s infinite;
+}
+
+.device-6 .icon.on {
+    color: #dada30;
+  }
+  
+  .device-6 .card.on {
+    background-color: #f6f0e0;
+  }
+  
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

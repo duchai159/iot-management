@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Icon Cards</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 device-1">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fa fa-fan fa-3x icon"></i>
+            <h5 class="card-title mt-3">Quạt</h5>
+            <p class="card-text">STATUS: <span class="status">?</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 device-2">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fa fa-wind fa-3x icon"></i>
+            <h5 class="card-title mt-3">Máy phun ẩm</h5>
+            <p class="card-text">STATUS: <span class="status">?</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 device-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fa fa-wind fa-3x icon"></i>
+            <h5 class="card-title mt-3">Máy điều hoà</h5>
+            <p class="card-text">STATUS: <span class="status">?</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 device-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fa fa-bell fa-3x icon"></i>
+            <h5 class="card-title mt-3">Chuông báo khói</h5>
+            <p class="card-text">STATUS: <span class="status">?</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 device-5">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fa fa-bell fa-3x icon"></i>
+            <h5 class="card-title mt-3">Chuông báo gas</h5>
+            <p class="card-text">STATUS: <span class="status">?</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 device-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fa fa-lightbulb fa-3x icon"></i>
+            <h5 class="card-title mt-3">Đèn</h5>
+            <p class="card-text">STATUS: <span class="status">?</span></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</html>
