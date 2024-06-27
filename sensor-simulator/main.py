@@ -2,10 +2,11 @@ import Simulator
 import paho.mqtt.client as mqtt_client
 import time, json
 
-broker = "0661a98ef5224ee5980218c5b4f368fe.s1.eu.hivemq.cloud"
+broker = "37bed9790dc74f54be13974aa7b03429.s1.eu.hivemq.cloud"
 port = 8883
-username = 'at170310'
-password = 'at170310'
+
+username = 'duchai159'
+password = 'Haikun159@'
 
 def connect_broker():
     client = mqtt_client.Client(protocol=mqtt_client.MQTTv5)
@@ -37,20 +38,6 @@ def main():
                     "humidity": {
                         "value": humidity,
                         "unit": "%"
-                    },
-                    "smoke": {
-                        "value": smoke,
-                        "unit": "V"
-                    },
-                    "gas": {
-                        "value": gas,
-                        "unit": "ppm"
-                    }
-                },
-                "outdoor_data": {
-                    "light": {
-                        "value": light,
-                        "unit": "V"
                     }
                 },
                 "timestamp": current_time

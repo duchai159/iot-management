@@ -18,14 +18,14 @@
 <body>
   <div class="container">
     <div class="charts">
-      <h1>ROOM</h1>
+      <!-- <h1>ROOM</h1> -->
       <div class="chart">
         <canvas id="temperature_chart"></canvas>
       </div>
       <div class="chart">
         <canvas id="humidity_chart"></canvas>
       </div>
-      <div class="chart">
+      <!-- <div class="chart">
         <canvas id="smoke_chart"></canvas>
       </div>
       <div class="chart">
@@ -35,13 +35,13 @@
       <h1>OUTDOOR</h1>
       <div class="chart">
         <canvas id="light_chart"></canvas>
-      </div>
+      </div> -->
     </div>
 
     <i class="fas fa-cog settings-icon" onclick="toggleSettings()"></i>
     <div class="settings" id="settingsPanel">
       <i class="fa fa-angle-left back-icon" onclick="toggleSettings()"></i>
-      <h2>Control Panel</h2>
+      <!-- <h2>Control Panel</h2> -->
       <div class="device" id="device-1">
         <div class="device-row">
           <div class="device-name">Quạt</div>
@@ -120,84 +120,6 @@
         </div>
       </div>
 
-      <div class="device" id="device-4">
-        <div class="device-row">
-          <div class="device-name">Chuông báo khói</div>
-          <div class="status">Status: <span class="status-value"></span></div>
-        </div>
-        <div class="device-row">
-          <div class="controls">
-            <label><input type="radio" name="mode-4" value="manual" onchange="toggleMode(4)" checked> Manual</label>
-            <label><input type="radio" name="mode-4" value="auto" onchange="toggleMode(4)"> Auto</label>
-          </div>
-        </div>
-        <div class="device-row">
-          <div class="control manual">
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider"></span>
-            </label>
-          </div>
-          <div class="control auto">
-            <input type="number" placeholder="Min" id="min-4">
-            <input type="number" placeholder="Max" id="max-4">
-          </div>
-          <button class="save-button" onclick="saveSettings(4)">Save</button>
-        </div>
-      </div>
-
-      <div class="device" id="device-5">
-        <div class="device-row">
-          <div class="device-name">Chuông báo gas</div>
-          <div class="status">Status: <span class="status-value"></span></div>
-        </div>
-        <div class="device-row">
-          <div class="controls">
-            <label><input type="radio" name="mode-5" value="manual" onchange="toggleMode(5)" checked> Manual</label>
-            <label><input type="radio" name="mode-5" value="auto" onchange="toggleMode(5)"> Auto</label>
-          </div>
-        </div>
-        <div class="device-row">
-          <div class="control manual">
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider"></span>
-            </label>
-          </div>
-          <div class="control auto">
-            <input type="number" placeholder="Min" id="min-5">
-            <input type="number" placeholder="Max" id="max-5">
-          </div>
-          <button class="save-button" onclick="saveSettings(5)">Save</button>
-        </div>
-      </div>
-
-      <div class="device" id="device-6">
-        <div class="device-row">
-          <div class="device-name">Đèn</div>
-          <div class="status">Status: <span class="status-value"></span></div>
-        </div>
-        <div class="device-row">
-          <div class="controls">
-            <label><input type="radio" name="mode-6" value="manual" onchange="toggleMode(6)" checked> Manual</label>
-            <label><input type="radio" name="mode-6" value="auto" onchange="toggleMode(6)"> Auto</label>
-          </div>
-        </div>
-        <div class="device-row">
-          <div class="control manual">
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider"></span>
-            </label>
-          </div>
-          <div class="control auto">
-            <input type="number" placeholder="Min" id="min-6">
-            <input type="number" placeholder="Max" id="max-6">
-          </div>
-          <button class="save-button" onclick="saveSettings(6)">Save</button>
-        </div>
-      </div>
-
     </div>
   </div>
 
@@ -240,11 +162,11 @@
           if (data !== null) {
             let [datePart, timePart] = data.timestamp.split(" ");
 
-            updateChartGas(data.room_data.gas.value, timePart)
+            // updateChartGas(data.room_data.gas.value, timePart)
             updateChartTemp(data.room_data.temperature.value, timePart)
-            updateChartSmoke(data.room_data.smoke.value, timePart)
+            // updateChartSmoke(data.room_data.smoke.value, timePart)
             updateChartHumidity(data.room_data.humidity.value, timePart)
-            updateChartLight(data.outdoor_data.light.value, timePart)
+            // updateChartLight(data.outdoor_data.light.value, timePart)
           }
         });
     }

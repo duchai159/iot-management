@@ -21,26 +21,14 @@ status = {
     "3": {
         "deviceId": 3,
         "turnOn": False
-    },
-    "4": {
-        "deviceId": 4,
-        "turnOn": False
-    },
-    "5": {
-        "deviceId": 5,
-        "turnOn": False
-    },
-    "6": {
-        "deviceId": 6,
-        "turnOn": False
-    },
+    }
 }
 
-broker = "0661a98ef5224ee5980218c5b4f368fe.s1.eu.hivemq.cloud"
+broker = "37bed9790dc74f54be13974aa7b03429.s1.eu.hivemq.cloud"
 port = 8883
 
-username = 'at170310'
-password = 'at170310'
+username = 'duchai159'
+password = 'Haikun159@'
 
 def on_connect(client, userdata, flags, rc, properties=None):
     print("Connected with result code " + str(rc))
@@ -123,12 +111,6 @@ def auto(device_id, min, max):
         value = mqtt_data["room_data"]["humidity"]["value"]
     elif device_id=="3":
         value = mqtt_data["room_data"]["temperature"]["value"]
-    elif device_id=="4":
-        value = mqtt_data["room_data"]["smoke"]["value"]
-    elif device_id=="5":
-        value = mqtt_data["room_data"]["gas"]["value"]
-    elif device_id=="6":
-        value = mqtt_data["outdoor_data"]["light"]["value"]
     turn_on = (value >= min and value <= max)
 
     toggle(device_id, turn_on)

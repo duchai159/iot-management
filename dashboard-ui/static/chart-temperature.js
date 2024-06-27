@@ -1,6 +1,6 @@
 var ctx = document.getElementById("temperature_chart").getContext("2d");
 var temperature_chart = new Chart(ctx, {
-  type: "line",
+  type: "bar",
   data: {
     labels: [],
     datasets: [

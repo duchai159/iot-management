@@ -40,11 +40,11 @@ actuator = {
         },
     }
 
-broker = "0661a98ef5224ee5980218c5b4f368fe.s1.eu.hivemq.cloud"
+broker = "37bed9790dc74f54be13974aa7b03429.s1.eu.hivemq.cloud"
 port = 8883
 
-username = 'at170310'
-password = 'at170310'
+username = 'duchai159'
+password = 'Haikun159@'
 
 def on_connect(client, userdata, flags, rc, properties=None):
     print("Connected with result code " + str(rc))
